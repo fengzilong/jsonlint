@@ -1,6 +1,6 @@
 {
   "name": "@biu/jsonlint",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "description": "lint your json, report all errors at once",
   "main": "lib/index.js",
   "publishConfig": {
