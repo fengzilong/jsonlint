@@ -23,7 +23,7 @@ yarn add @biu/jsonlint
 # API
 
 ```js
-const { lint } = require( '@biu/jsonlint' )
+const lint = require( '@biu/jsonlint' )
 
 lint( string, options )
 ```
@@ -41,6 +41,16 @@ Type: `String`
 Default: `'pretty'`
 
 Values: `'pretty' | 'json'`
+
+If you use `json` reporter, the return value looks like:
+
+```js
+{
+  source: '', // source code
+  errors: [], // with keys: `{ line, column, message, severity }`
+  comments: [], // with keys: `{ start: { line, column }, end: { line, column } }`
+}
+```
 
 ### options.silent
 

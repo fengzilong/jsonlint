@@ -48,6 +48,8 @@ test( 'lint - reporter json', () => {
     reporter: 'json',
     allowComments: true
   } )
+  
+  console.log( result.comments )
 
   expect( typeof result ).toBe( 'object' )
   expect( result.source ).toBe( string )
