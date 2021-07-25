@@ -57,7 +57,7 @@ By default it will report comment errors(in standard json syntax, comments is no
 
 # Why not try/catch + JSON.parse
 
-`JSON.parse` is not error 
+`JSON.parse` is not fault tolerant, so it cannot continue after seeing first error, while we use a fault tolerant parser inside to avoid this situation
 
 # License
 
