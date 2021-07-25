@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "description": "lint your json, report all errors at once",
   "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test:jest": "jest",
     "test:watch": "jest --watch",
