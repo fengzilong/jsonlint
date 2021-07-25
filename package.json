@@ -39,7 +39,15 @@
     "jest": "^27.0.6",
     "lint-staged": ">=10"
   },
+  "repository": "github:fengzilong/jsonlint",
+  "homepage": "https://github.com/fengzilong/jsonlint#readme",
+  "bugs": {
+    "url": "https://github.com/fengzilong/jsonlint/issues"
+  },
   "lint-staged": {
     "lib/*.js": "eslint --cache --fix"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
