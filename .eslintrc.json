@@ -1,0 +1,6 @@
+{
+  "extends": "mo",
+  "rules": {
+    "no-magic-numbers": "off"
+  }
+}
