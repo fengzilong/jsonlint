@@ -1,20 +1,11 @@
-const lint = require( './' )
+const { lint, format } = require( './' )
 
-test( 'lint', () => {
-  const errors = lint( `
-    {
-      // hello
-      "json": {
-        "a": "value",
-      },
-      'b': 1
-    }
-  ` )
-
-  expect( typeof errors ).toBe( 'string' )
+test( 'lint and format is defined', () => {
+  expect( typeof lint ).toBe( 'function' )
+  expect( typeof format ).toBe( 'function' )
 } )
 
-test( 'lint - reporter json', () => {
+test( 'lint - basic', () => {
   const string = `
     {
       // hello
@@ -24,17 +15,19 @@ test( 'lint - reporter json', () => {
       'b': 1
     }
   `
-  const result = lint( string, {
-    reporter: 'json'
-  } )
+  const result = lint( string )
 
   expect( typeof result ).toBe( 'object' )
   expect( result.source ).toBe( string )
   expect( result.errors.length ).toBe( 3 )
   expect( result.comments.length ).toBe( 1 )
+  expect( typeof result.codeframe ).toBe( 'string' )
+  
+  const formatted = format( result )
+  expect( typeof formatted ).toBe( 'string' )
 } )
 
-test( 'lint - reporter json', () => {
+test( 'lint - allowComments', () => {
   const string = `
     {
       // hello
@@ -45,14 +38,12 @@ test( 'lint - reporter json', () => {
     }
   `
   const result = lint( string, {
-    reporter: 'json',
     allowComments: true
   } )
   
-  console.log( result.comments )
-
   expect( typeof result ).toBe( 'object' )
   expect( result.source ).toBe( string )
   expect( result.errors.length ).toBe( 2 )
   expect( result.comments.length ).toBe( 1 )
+  expect( typeof result.codeframe ).toBe( 'string' )
 } )

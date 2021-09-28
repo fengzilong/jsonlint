@@ -28,8 +28,8 @@
   "author": "fengzilong",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^4.1.1",
     "emphasize": "^4.2.0",
+    "nanocolors": "^0.2.11",
     "vscode-json-languageservice": "^4.1.6"
   },
   "devDependencies": {
