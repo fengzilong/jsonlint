@@ -4,15 +4,13 @@
 ![npm downloads](https://img.shields.io/npm/dm/@biu/jsonlint)
 [![npm](https://img.shields.io/npm/v/@biu/jsonlint.svg)](https://www.npmjs.com/package/@biu/jsonlint)
 
+<img align="center" width="360px" src="./screenshot.jpg" />
+
 # Features
 
 - ⚔️ Lint all errors at once
-- 🌈Human-friendly, intuitive message to stdout
-- 🚀Smaller than ESLint
-
-# Screenshot
-
-<img align="center" width="500px" src="./screenshot.jpg" />
+- 🌈 Human-friendly, intuitive message to stdout
+- 🚀 Smaller than ESLint
 
 # Installation
 
