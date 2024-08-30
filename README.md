@@ -1,6 +1,6 @@
 # jsonlint
 
-[![Node.js CI status](https://github.com/fengzilong/jsonlint/workflows/Node.js%20CI/badge.svg)](https://github.com/fengzilong/jsonlint/actions)
+[![Node.js CI status](https://github.com/fengzilong/jsonlint/workflows/CI/badge.svg)](https://github.com/fengzilong/jsonlint/actions)
 ![npm downloads](https://img.shields.io/npm/dm/@biu/jsonlint)
 [![npm](https://img.shields.io/npm/v/@biu/jsonlint.svg)](https://www.npmjs.com/package/@biu/jsonlint)
 
