@@ -10,13 +10,10 @@
     "lib"
   ],
   "scripts": {
-    "test:jest": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test": "vitest run --coverage",
     "pretest": "npm run lint",
-    "test": "npm run test:jest --",
-    "lint": "eslint ./lib --cache --fix",
-    "prepare": "husky install"
+    "lint": "eslint ./lib",
+    "prepare": "simple-git-hooks"
   },
   "keywords": [
     "json",
@@ -28,26 +25,24 @@
   "author": "fengzilong",
   "license": "MIT",
   "dependencies": {
-    "emphasize": "^4.2.0",
-    "nanocolors": "^0.2.11",
-    "vscode-json-languageservice": "^4.1.6"
+    "emphasize": "^6.0.0",
+    "nanocolors": "^0.2.13",
+    "vscode-json-languageservice": "^5.4.1"
   },
   "devDependencies": {
     "eslint": "^7.31.0",
     "eslint-config-mo": "^0.5.3",
-    "husky": ">=6",
-    "jest": "^27.0.6",
-    "lint-staged": ">=10"
+    "vitest": "^2.0.5",
+    "@vitest/coverage-v8": "^2.0.5",
+    "simple-git-hooks": "^2.11.1",
+    "strip-ansi": "^7.1.0"
   },
   "repository": "github:fengzilong/jsonlint",
   "homepage": "https://github.com/fengzilong/jsonlint#readme",
   "bugs": {
     "url": "https://github.com/fengzilong/jsonlint/issues"
   },
-  "lint-staged": {
-    "lib/*.js": "eslint --cache --fix"
-  },
-  "engines": {
-    "node": ">=10"
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint"
   }
 }
